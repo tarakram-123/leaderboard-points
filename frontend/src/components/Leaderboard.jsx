@@ -8,7 +8,7 @@ const Leaderboard = () => {
   const loadLeaderboard = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://leaderboard-points-backend.onrender.com/api/points/leaderboard");
+      const res = await axios.get("http://localhost:5000/api/points/leaderboard");
       setUsers(res.data);
     } catch (error) {
       console.error("Error loading leaderboard:", error);
